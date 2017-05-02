@@ -13,11 +13,17 @@ public class Main {
         
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
-            System.out.println(line);
+            sumOfDigits(line);
         }
     }
     
     public static void sumOfDigits(String line) {
+        int sum = 0;
         
+        for(int i = 0; i < line.length(); i++) {
+            sum += Character.getNumericValue(line.charAt(i));
+        }
+        
+        System.out.println(sum);
     }
 }
